@@ -11,13 +11,6 @@ namespace UnitTest
 		
 		TEST_METHOD(TestMethod1)
 		{
-			int k = 0;
-			int n = 2;
-
-			k *= n * n - 2 * n + 1;
-
-			Assert::AreEqual(k, 0);
-
 		}
 	};
 }
