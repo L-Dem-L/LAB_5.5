@@ -8,10 +8,9 @@ int C(int n, int k, int level, int& depth)
     if (level > depth)
         depth = level;
 
-    // вивід значення поточного рівня рекурсії
     cout << " level = " << level << endl;
 
-    if (k == n or k == 0)
+    if (k == n || k == 0)
         return 1;
     else
         return C(n - 1, k - 1, level + 1, depth) + C(n - 1, k, level + 1, depth);
@@ -22,7 +21,6 @@ double b(const int n, int level, int& depth)
     if (level > depth)
         depth = level;
 
-    // вивід значення поточного рівня рекурсії
     cout << " level = " << level << endl;
 
     double p = 0;
@@ -36,10 +34,9 @@ int f(int n, int level, int& depth)
     if (level > depth)
         depth = level;
 
-    // вивід значення поточного рівня рекурсії
     cout << " level = " << level << endl;
 
-    if (n == 0 or n == 1)
+    if (n == 0 || n == 1)
         return 1;
     else
         return f(n - 1, level + 1, depth) + f(n - 2, level + 1, depth);
@@ -55,20 +52,20 @@ int main()
     cin >> k;
     cout << endl;
 
-    int depth = 0; // початкове значення глибини
-    int level = 1; // початкове значення рівня рекурсії
+    int depth = 0;
+    int level = 1;
 
     cout << "C(n, k) = " << C(n, k, level, depth) << endl;
     cout << "depth = " << depth << endl;
 
-    depth = 0; // обнуляємо глибину для інших функцій
-    level = 1; // обнуляємо рівень рекурсії для інших функцій
+    depth = 0;
+    level = 1;
 
     cout << "b(n) = " << b(n, level, depth) << endl;
     cout << "depth = " << depth << endl;
 
-    depth = 0; // обнуляємо глибину для інших функцій
-    level = 1; // обнуляємо рівень рекурсії для інших функцій
+    depth = 0;
+    level = 1;
 
     cout << "f(n) = " << f(n, level, depth) << endl;
     cout << "depth = " << depth << endl;
